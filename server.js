@@ -3,15 +3,18 @@ const MongoClient = require('mongodb').MongoClient
 const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static('public'));
+app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 
 var db;
+var port = 3000;
 
 MongoClient.connect('mongodb://me:yvgkqp@ds053196.mlab.com:53196/myfirstmdb', (err,database) => {
 	if(err) return console.log(err)
 	db = database;
-	app.listen(3000, () => {
+	app.listen(port, () => {
 		console.log('Hi, I am MONGO and currently listening on 3000')
 	})
 })
@@ -31,6 +34,9 @@ app.get('/', (req, res) => {
 		//render
 	res.render('index.ejs',{quotes: result})
 	//console.log(result)
+})
+	app.put('/quotes', (req, res) => {
+  // Handle put request
 })
 })
 
