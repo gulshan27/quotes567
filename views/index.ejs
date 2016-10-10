@@ -2,14 +2,19 @@
 <title>Ineffable</title>
 	<body>
 
-		<h1> Let us crack open the heavens, and gain their attention.</h1>
+		<h1> Let us crack open the heavens, and gain their attention. [Random H1 Header]</h1>
 
 		<form action="/quotes" method="POST">
 			<input type="text" placeholder="name" name="name">
 			<input type="text" placeholder="quote" name="quote">
-			<button type="submit">Submit</button>
+			<button type="submit">Submit</button><p align="left">Come on, be a sport and type something, then hit Submit.</p>
 		</form>
-		
+
+		<div>
+		Want to change something?
+		<button id="update">Update</button>
+		</div>
+
 		<ul class="quotes">
 	  	<% for(var i=0; i<quotes.length; i++) {%>
 	    	<li class="quote">
@@ -18,6 +23,8 @@
 	    	</li>
 	  	<% } %>
 	  	</ul>
+
+	  	<script src="main.js"></script>
 
 
 		

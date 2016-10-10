@@ -1,7 +1,10 @@
 const express = require('express');
 const MongoClient = require('mongodb').MongoClient
 const bodyParser = require('body-parser');
+var http = require('http');
+
 const app = express();
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 app.use(bodyParser.json());
@@ -9,12 +12,13 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 
 var db;
-var port = 3000;
+
+
 
 MongoClient.connect('mongodb://me:yvgkqp@ds053196.mlab.com:53196/myfirstmdb', (err,database) => {
 	if(err) return console.log(err)
 	db = database;
-	app.listen(port, () => {
+	app.listen(process.env.PORT || 3000, () => {
 		console.log('Hi, I am MONGO and currently listening on 3000')
 	})
 })
