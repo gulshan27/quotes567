@@ -1,0 +1,25 @@
+<html>
+<title>Ineffable</title>
+	<body>
+
+		<h1> Let us crack open the heavens, and gain their attention.</h1>
+
+		<form action="/quotes" method="POST">
+			<input type="text" placeholder="name" name="name">
+			<input type="text" placeholder="quote" name="quote">
+			<button type="submit">Submit</button>
+		</form>
+		
+		<ul class="quotes">
+	  	<% for(var i=0; i<quotes.length; i++) {%>
+	    	<li class="quote">
+	      	<span><b><%= quotes[i].name %></b></span>: 
+	      	<span><%= quotes[i].quote %></span>
+	    	</li>
+	  	<% } %>
+	  	</ul>
+
+
+		
+	</body>
+</html>
