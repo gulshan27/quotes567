@@ -1,19 +1,26 @@
 <html>
 <title>Ineffable</title>
-	<body>
+<style> body {color:white; font-family: Montserrat, Arial, sans-serif; font-size: 20px;} </style>
+	<body bgcolor="#FF1F59" >
 
-		<h1> Let us crack open the heavens, and gain their attention. [Random H1 Header]</h1>
+
+		<h1> Let us crack open the heavens, and gain their attention.</h1>
 
 		<form action="/quotes" method="POST">
-			<input type="text" placeholder="name" name="name">
-			<input type="text" placeholder="quote" name="quote">
-			<button type="submit">Submit</button><p align="left">Come on, be a sport and type something, then hit Submit.</p>
+			<input type="text" style="height:2.5em;width:8em;" placeholder="Name" name="name">
+			<input type="textbox" style="height:2.5em;width:30em;" placeholder="Quote" name="quote">
+			<button type="submit" style="height:2.5em;width:6em;">Submit</button><p align="left">Come on, be a sport and type something, then hit Submit.</p>
 		</form>
 
-		<div>
-		Want to change something?
-		<button id="update">Update</button>
-		</div>
+		
+		<font color="blue">Replace last quote written by Ankur with a quote written by Gulshan.</font>
+		<button id="update" style="height:2em;width:5em;">Update</button>
+		
+
+		<br>
+  		<font color="yellow">Delete last quote.</font>
+  		<button id="delete" style="height:2em;width:5em;">Delete</button>
+		
 
 		<ul class="quotes">
 	  	<% for(var i=0; i<quotes.length; i++) {%>
