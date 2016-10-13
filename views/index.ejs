@@ -1,9 +1,9 @@
 <html>
 <title>Ineffable</title>
-<style> body {color:white; font-family: Montserrat, Arial, sans-serif; font-size: 20px;} </style>
-	<body bgcolor="#FF1F59" >
+<style> body {color:white; font-family: Montserrat, Arial, sans-serif; font-size: 20px;} A {color: white; font-size: 12px;}</style>
+	<body bgcolor="#000000" >
 
-
+	<A NAME="TOP"></A>
 		<h1> Let us crack open the heavens, and gain their attention.</h1>
 
 		<form action="/quotes" method="POST">
@@ -13,13 +13,17 @@
 		</form>
 
 		
-		<font color="blue">Replace last quote written by Ankur with a quote written by Gulshan.</font>
+		<font color="yellow">Replace last quote written by Ankur with a quote written by Gulshan.</font>
 		<button id="update" style="height:2em;width:5em;">Update</button>
 		
 
 		<br>
-  		<font color="yellow">Delete last quote.</font>
+  		<font color="red">Delete last quote.</font>
   		<button id="delete" style="height:2em;width:5em;">Delete</button>
+  		
+
+  		<A HREF="#BOTTOM"><p style="position: absolute; left: 285px; top: 203px; text-decoration: underline;">See what's down there.</p></A>
+
 		
 
 		<ul class="quotes">
@@ -29,11 +33,10 @@
 	      	<span><%= quotes[i].quote %></span>
 	    	</li>
 	  	<% } %>
-	  	</ul>
 
-	  	<script src="main.js"></script>
+	  	<A NAME="BOTTOM"></A>
+	  	<A HREF="#TOP"><p style="text-align:left;">Want to go up?</p></A>
 
-
-		
+	  	<script src="main.js"></script>	
 	</body>
 </html>

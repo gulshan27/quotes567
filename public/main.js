@@ -1,7 +1,8 @@
 var update = document.getElementById('update')
 var del = document.getElementById('delete')
 
-update.addEventListener('click', function () {	fetch('quotes', 
+update.addEventListener('click', function () {
+	fetch('quotes', 
 	{
     	method: 'put',
     	headers: {'Content-Type': 'application/json'},

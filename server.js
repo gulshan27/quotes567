@@ -40,6 +40,7 @@
 		//console.log(result)
 	})
 	})
+
 		app.put('/quotes', (req, res) => {
 			db.collection('quotes')
 		  	.findOneAndUpdate({name: 'Ankur'}, {
